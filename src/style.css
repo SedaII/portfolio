@@ -38,19 +38,17 @@ header h2 {
 
 .projects {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 1.5vw;
   justify-content: center;
   padding: 1.5vw;
-  border-radius: 30px;
-  border: 3px solid #00e673;
 }
 
 .project-card {
   background-color: #00e673;
   color: #222;
   border-radius: 0 0 30px 30px;
-  width: 20vw;
+  width: auto;
   height: auto;
   padding-bottom: 15px;
 }
@@ -64,4 +62,17 @@ header h2 {
 
 .project-card h3,.project-card p {
   padding: 0 15px;
+  font-size: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .projects {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1280px) {
+  .projects {
+    grid-template-columns: auto auto;
+  }
 }
