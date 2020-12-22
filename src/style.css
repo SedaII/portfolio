@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
 
+:root {
+  --prim-dark: #222;
+  --prim-light: #00e673;
+
+}
+
 body {
   font-family: 'Prompt', sans-serif;
   background-color: #222;
@@ -28,15 +34,54 @@ header h2 {
   justify-content: center;
 }
 
-.projects-container {
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  margin: 30px;
-  padding: 0px;
+.skills h2 {
+  display: block;
+  text-align: left;
 }
 
-.projects {
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 65px;
+}
+
+.skill {
+  background-color: var(--prim-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.skill i {
+  background-color: var(--prim-dark);
+  font-size: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 15px 20px;
+}
+
+.skill-details {
+  color: var(--prim-dark);
+  width: 0;
+  opacity: 0;
+}
+
+.skill:hover {
+  border-radius: 100px;
+  width: 300px;
+  transition: 2s ease;
+}
+
+.skill:hover .skill-details {
+  width: 300px;
+  opacity: 1;
+  transition: opacity 3s ease 1s;
+}
+
+.projects-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 1.5vw;
@@ -61,18 +106,19 @@ header h2 {
 }
 
 .project-card h3,.project-card p {
+  margin: 3px;
   padding: 0 15px;
   font-size: auto;
 }
 
 @media screen and (max-width: 900px) {
-  .projects {
+  .projects-container {
     grid-template-columns: auto;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1280px) {
-  .projects {
+  .projects-container {
     grid-template-columns: auto auto;
   }
 }
