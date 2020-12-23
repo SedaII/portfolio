@@ -78,7 +78,7 @@ header h2 {
 .skill:hover .skill-details {
   width: 300px;
   opacity: 1;
-  transition: opacity 3s ease 1s;
+  transition: opacity 2s ease .2s;
 }
 
 .projects-container {
